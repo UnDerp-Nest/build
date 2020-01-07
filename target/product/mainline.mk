@@ -24,11 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
 
-ifeq ($(AOSIP_BUILD),)
 $(call inherit-product, frameworks/base/data/sounds/AllAudio.mk)
-else
-$(call inherit-product, frameworks/base/data/sounds/AudioPackage14.mk)
-endif
 
 ifeq ($(AOSIP_BUILD),)
 PRODUCT_PROPERTY_OVERRIDES += \
